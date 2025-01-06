@@ -27,11 +27,6 @@ const QrContact = dynamic(() => import("@/components/QrContact"), { ssr: false }
 
 const info = [
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "(+90) 507 442 14 68",
-  },
-  {
     icon: <FaEnvelope />,
     title: "Email",
     description: "ilkcan.irturk@outlook.com",
