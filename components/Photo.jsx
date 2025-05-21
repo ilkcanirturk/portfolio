@@ -23,7 +23,7 @@ const Photo = () => {
           className="relative w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] before:absolute before:inset-0 before:bg-black/10 hover:before:bg-black/25 before:rounded-full before:z-10"
         >
           <Image
-            src="/assets/pp.webp"
+            src="/assets/pp.jpeg"
             priority
             quality={100}
             fill
