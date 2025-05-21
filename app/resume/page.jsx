@@ -24,11 +24,10 @@ import ClimbAnimation from "@/components/animations/ClimbAnimation";
 import ExperienceAnimation from "@/components/animations/ExperienceAnimation";
 import AboutAnimation from "@/components/animations/AboutAnimation";
 
-//about data
 const about = {
   title: "About me",
   description:
-    "I'm a passionate Software Engineer with more than 3 years of experience creating user-friendly and visually appealing web and mobile applications. I specialize in React.js, Next.js, and modern web technologies. Let's create something amazing together!",
+    "I'm a passionate Software Engineer with more than 4 years of experience creating user-friendly and visually appealing web and mobile applications. I specialize in React.js, Next.js, and modern web technologies. Let's create something amazing together!",
   info: [
     {
       fieldName: "Name",
@@ -36,7 +35,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "3+ Years",
+      fieldValue: "4+ Years",
     },
     {
       fieldName: "Nationality",
@@ -65,9 +64,14 @@ const experience = {
     "My experience spans across creating engaging user interfaces and robust applications, always focusing on delivering value and innovation.",
   items: [
     {
+      company: "Storish (E-Commerce) - Erciyes Anadolu Holding",
+      position: "Full-Stack Developer",
+      duration: "May 2025 - Present",
+    },
+    {
       company: "Erciyes Anadolu Holding",
       position: "Front-End Developer",
-      duration: "Feb 2023 - Present",
+      duration: "Feb 2023 - May 2025",
     },
     {
       company: "Turkcell - Future Writers Bootcamp Program 2.0",
@@ -203,198 +207,148 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-8 sm:py-12 xl:py-0"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 sm:px-4 lg:px-8">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-8 xl:gap-[60px]"
+          className="flex flex-col xl:flex-row gap-6 xl:gap-[60px]"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 p-4 rounded-xl">
-            <TabsTrigger
-              className="hover:text-accent hover:bg-accent/10 "
-              value="experience"
-            >
+          {/* Tab başlıkları */}
+          <TabsList className="flex flex-col w-full max-w-[360px] mx-auto xl:mx-0 gap-4 sm:gap-6 p-4 rounded-xl">
+            <TabsTrigger className="hover:text-accent hover:bg-accent/10" value="experience">
               Experience
             </TabsTrigger>
-            <TabsTrigger
-              className="hover:text-accent hover:bg-accent/10"
-              value="education"
-            >
+            <TabsTrigger className="hover:text-accent hover:bg-accent/10" value="education">
               Education
             </TabsTrigger>
-            <TabsTrigger
-              className="hover:text-accent hover:bg-accent/10"
-              value="skills"
-            >
+            <TabsTrigger className="hover:text-accent hover:bg-accent/10" value="skills">
               Skills
             </TabsTrigger>
-            <TabsTrigger
-              className="hover:text-accent hover:bg-accent/10"
-              value="about"
-            >
+            <TabsTrigger className="hover:text-accent hover:bg-accent/10" value="about">
               About me
             </TabsTrigger>
           </TabsList>
-          {/* content */}
+
+          {/* İçerik */}
           <div className="flex-1 min-h-[70vh] w-full">
-            {/* experience */}
-            <TabsContent value="experience" className="w-full h-[580px]">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left h-full">
+            {/* Experience */}
+            <TabsContent value="experience" className="w-full h-[65vh] sm:h-[580px]">
+              <div className="flex flex-col gap-6 text-center xl:text-left h-full">
                 <div className="flex flex-row justify-between items-center">
-                  <h3 className="text-3xl xl:text-4xl font-bold">
-                    {experience.title}
-                  </h3>
-                  <span>
-                    <ExperienceAnimation />
-                  </span>
+                  <h3 className="text-2xl sm:text-3xl xl:text-4xl font-bold">{experience.title}</h3>
+                  <span><ExperienceAnimation /></span>
                 </div>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[500px] w-full">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:bg-[#2c2c34] transition-colors duration-300"
-                        >
-                          <span className="text-accent text-sm">
-                            {item.duration}
-                          </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left font-semibold">
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="inline-block w-[12px] h-[12px] rounded-full bg-accent flex-shrink-0"></span>
-                            <p className="text-white/60 text-sm">
-                              {item.company}
-                            </p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                <ScrollArea className="h-[52vh] sm:h-[500px] w-full">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-[30px]">
+                    {experience.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[130px] sm:h-[184px] py-4 sm:py-6 px-4 sm:px-10 rounded-xl flex flex-col justify-center items-center md:items-start gap-1 hover:bg-[#2c2c34] transition-colors duration-300"
+                      >
+                        <span className="text-accent text-sm">{item.duration}</span>
+                        <h3 className="text-base sm:text-xl max-w-[220px] sm:max-w-[260px] min-h-[40px] sm:min-h-[60px] text-center md:text-left font-semibold">
+                          {item.position}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="inline-block w-[10px] sm:w-[12px] h-[10px] sm:h-[12px] rounded-full bg-accent flex-shrink-0"></span>
+                          <p className="text-white/60 text-xs sm:text-sm">{item.company}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* education */}
-            <TabsContent value="education" className="w-full h-[580px]">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left h-full">
+            {/* Education */}
+            <TabsContent value="education" className="w-full h-[65vh] sm:h-[580px]">
+              <div className="flex flex-col gap-6 text-center xl:text-left h-full">
                 <div className="flex flex-row justify-between items-center">
-                  <h3 className="text-3xl xl:text-4xl font-bold">
-                    {education.title}
-                  </h3>
-                  <span>
-                    <ClimbAnimation />
-                  </span>
+                  <h3 className="text-2xl sm:text-3xl xl:text-4xl font-bold">{education.title}</h3>
+                  <span><ClimbAnimation /></span>
                 </div>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[500px] w-full">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:bg-[#2c2c34] transition-colors duration-300"
-                        >
-                          <span className="text-accent text-sm">
-                            {item.duration}
-                          </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left font-semibold">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="inline-block w-[12px] h-[12px] rounded-full bg-accent flex-shrink-0"></span>
-                            <p className="text-white/60 text-sm">
-                              {item.institution}
-                            </p>
-                          </div>
-                        </li>
-                      );
-                    })}
+                <ScrollArea className="h-[52vh] sm:h-[500px] w-full">
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-[30px]">
+                    {education.items.map((item, index) => (
+                      <li
+                        key={index}
+                        className="bg-[#232329] h-[130px] sm:h-[184px] py-4 sm:py-6 px-4 sm:px-10 rounded-xl flex flex-col justify-center items-center md:items-start gap-1 hover:bg-[#2c2c34] transition-colors duration-300"
+                      >
+                        <span className="text-accent text-sm">{item.duration}</span>
+                        <h3 className="text-base sm:text-xl max-w-[220px] sm:max-w-[260px] min-h-[40px] sm:min-h-[60px] text-center md:text-left font-semibold">
+                          {item.degree}
+                        </h3>
+                        <div className="flex items-center gap-3">
+                          <span className="inline-block w-[10px] sm:w-[12px] h-[10px] sm:h-[12px] rounded-full bg-accent flex-shrink-0"></span>
+                          <p className="text-white/60 text-xs sm:text-sm">{item.institution}</p>
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* skills */}
-            <TabsContent value="skills" className="w-full h-[580px]">
-              <div className="flex flex-col gap-[30px] h-full">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+            {/* Skills */}
+            <TabsContent value="skills" className="w-full h-[65vh] sm:h-[580px]">
+              <div className="flex flex-col gap-6 h-full">
+                <div className="flex flex-col gap-4 text-center xl:text-left">
                   <div className="flex flex-row justify-between items-center">
-                    <h3 className="text-4xl font-bold">{skills.title}</h3>
-                    <span>
-                      <ReactIconAnimated />
-                    </span>
+                    <h3 className="text-2xl sm:text-4xl font-bold">{skills.title}</h3>
+                    <span><ReactIconAnimated /></span>
                   </div>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ScrollArea className="h-[500px] w-full">
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                    {skills.skillList.map((skill, index) => {
-                      return (
-                        <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                <div className="text-6xl group-hover:text-accent transition-all duration-300 hover:scale-125">
-                                  {skill.icon}
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="text-accent capitalize">
-                                  {skill.name}
-                                </p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        </li>
-                      );
-                    })}
+                <ScrollArea className="h-[52vh] sm:h-[500px] w-full">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, index) => (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[80px] sm:h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                              <div className="text-3xl sm:text-6xl group-hover:text-accent transition-all duration-300 hover:scale-125">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="text-accent capitalize">{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
-            {/* about */}
-            <TabsContent
-              value="about"
-              className="w-full h-[580px] text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-[30px] h-full">
+            {/* About */}
+            <TabsContent value="about" className="w-full h-[65vh] sm:h-[580px] text-center xl:text-left">
+              <div className="flex flex-col gap-6 h-full">
                 <div className="flex flex-row justify-between items-center">
-                  <h3 className="text-4xl font-bold">{about.title}</h3>
-                  <span>
-                    <AboutAnimation />
-                  </span>
+                  <h3 className="text-2xl sm:text-4xl font-bold">{about.title}</h3>
+                  <span><AboutAnimation /></span>
                 </div>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
-                <ScrollArea className="h-[500px] w-full">
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                    {about.info.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="flex items-center justify-center xl:justify-start gap-4"
-                        >
-                          <span>
-                            <span className="text-white/60 hover:cursor-default">
-                              {item.fieldName}
-                            </span>
-                            <span className="text-lg text-accent">:</span>
-                          </span>
-                          <span className="text-xl hover:text-accent hover:cursor-default">
-                            {item.fieldValue}
-                          </span>
-                        </li>
-                      );
-                    })}
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <ScrollArea className="h-[52vh] sm:h-[500px] w-full">
+                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-4 sm:gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                    {about.info.map((item, index) => (
+                      <li key={index} className="flex items-center justify-center xl:justify-start gap-3 sm:gap-4">
+                        <span>
+                          <span className="text-white/60 hover:cursor-default">{item.fieldName}</span>
+                          <span className="text-lg text-accent">:</span>
+                        </span>
+                        <span className="text-base sm:text-xl hover:text-accent hover:cursor-default">
+                          {item.fieldValue}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
                 </ScrollArea>
               </div>
