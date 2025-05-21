@@ -46,7 +46,7 @@ const MobileNav = ({ theme, toggleTheme }) => {
         <div className="flex flex-col flex-1 justify-center min-h-0">
           {/* Logo */}
           <div className="mb-12 sm:mb-16 text-center">
-            <Link href="/">
+            <Link href="/" onClick={closeMenu}>
               <h1 className="text-3xl sm:text-4xl font-semibold">
                 İlkcan<span className="text-accent">.</span>
               </h1>
