@@ -18,16 +18,16 @@ const HomeContent = () => {
       </p>
       <div className="flex flex-col xl:flex-row items-center gap-4">
         <a
-          href="/assets/resume/CV-EN-ilkcanirturk.pdf"
-          download="CV-EN-ilkcanirturk.pdf"
+          href="/assets/resume/ilkcanirturk-EN.pdf"
+          download="ilkcanirturk-EN.pdf"
           className="text-xl uppercase flex items-center gap-2 border text-accent hover:bg-accent hover:text-primary rounded-full border-accent py-2 px-4 hover:scale-110 transition-all duration-300"
         >
           <span>CV-EN</span>
           <FiDownload className="text-xl" />
         </a>
         <a
-          href="/assets/resume/CV-TR-ilkcanirturk.pdf"
-          download="CV-TR-ilkcanirturk.pdf"
+          href="/assets/resume/ilkcanirturk-TR.pdf"
+          download="ilkcanirturk-TR.pdf"
           className="text-xl uppercase flex items-center gap-2 border text-accent hover:bg-accent hover:text-primary rounded-full border-accent py-2 px-4 hover:scale-110 transition-all duration-300"
         >
           <span>CV-TR</span>
