@@ -6,16 +6,16 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-// import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipProvider,
-//   TooltipTrigger,
-// } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-// import Link from "next/link";
+import Link from "next/link";
 
 import Image from "next/image";
 import SliderButtons from "@/components/SliderButtons";
@@ -33,8 +33,8 @@ const projects = [
       { name: "Css 3" },
     ],
     image: "/assets/work/storish.png",
-    live: "",
-    github: "",
+    live: "https://www.ilkcan.me/work",
+    github: "https://github.com/ilkcanirturk",
   },
   {
     num: "02",
@@ -48,8 +48,8 @@ const projects = [
       { name: "Tailwind" },
     ],
     image: "/assets/work/esa-gumussuyu-ss.png",
-    live: "",
-    github: "",
+    live: "https://www.ilkcan.me/work",
+    github: "https://github.com/ilkcanirturk",
   },
   {
     num: "03",
@@ -63,8 +63,8 @@ const projects = [
       { name: "Tailwind" }
     ],
     image: "/assets/work/mdt-bellona-ss.png",
-    live: "",
-    github: "",
+    live: "https://www.ilkcan.me/work",
+    github: "https://github.com/ilkcanirturk",
   },
   {
     num: "04",
@@ -78,8 +78,8 @@ const projects = [
         { name: "Tailwind" }
       ],
     image: "/assets/work/mdt-istikbal-ss.png",
-    live: "",
-    github: "",
+    live: "https://www.ilkcan.me/work",
+    github: "https://github.com/ilkcanirturk",
   },
   {
     num: "05",
@@ -93,13 +93,13 @@ const projects = [
         { name: "Tailwind" }
       ],
     image: "/assets/work/mdt-mondi-ss.png",
-    live: "",
-    github: "",
+    live: "https://www.ilkcan.me/work",
+    github: "https://github.com/ilkcanirturk",
   },
   {
     num: "06",
     category: "mobile",
-    title: "project 5",
+    title: "project 6",
     description:
       "Link App: An experimental chat application built with React Native.",
     stack: [
@@ -109,8 +109,56 @@ const projects = [
       
     ],
     image: "/assets/work/linkapp-ss.png",
-    live: "",
+    live: "https://www.ilkcan.me/work",
     github: "https://github.com/ilkcanirturk/LinkApp",
+  },
+  {
+    num: "07",
+    category: "web",
+    title: "project 7",
+    description:
+      "Storish Portal: A business intelligence platform that centralizes the company's e-commerce operations and enables data-driven decision-making.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Supabase" },
+      { name: "Shadcn" },
+      
+    ],
+    image: "/assets/work/portalstorish.png",
+    live: "https://www.ilkcan.me/work",
+    github: "https://github.com/ilkcanirturk",
+  },
+  {
+    num: "08",
+    category: "web",
+    title: "project 8",
+    description:
+      "YosAcademy: A consulting platform for international students.",
+    stack: [
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "i18n" },
+      
+    ],
+    image: "/assets/work/yosacademy.png",
+    live: "https://www.yosacademy.info",
+    github: "https://github.com/ilkcanirturk",
+  },
+  {
+    num: "09",
+    category: "web",
+    title: "project 9",
+    description:
+      "Storish Product Catalog: A modern, multilingual product catalog for the Storish brand.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind" },
+      { name: "Vercel" },
+      
+    ],
+    image: "/assets/work/storishcatalog.png",
+    live: "https://www.catalogstorish.com",
+    github: "https://github.com/ilkcanirturk",
   },
 ];
 
@@ -156,7 +204,7 @@ const Work = () => {
                 );
               })}
             </ul>
-            {/* <div className="border border-white/20 my-4"></div>
+            <div className="border border-white/20 my-4"></div>
             <div className="flex items-center gap-4">
               <Link href={project.live} target="_blank">
                 <TooltipProvider delayDuration={100}>
@@ -182,7 +230,7 @@ const Work = () => {
                   </Tooltip>
                 </TooltipProvider>
               </Link>
-            </div> */}
+            </div>
           </div>
           <div className="w-full xl:w-[50%]">
             <Swiper
@@ -228,8 +276,8 @@ const Work = () => {
                       transition-all duration-300
                       ${
                         idx === activeIndex
-                          ? "h-1 w-20 bg-accent"
-                          : "h-[2px] w-10 bg-white/20"
+                          ? "h-1 w-10 bg-accent"
+                          : "h-[2px] w-50 bg-white/20"
                       }
                     `}
                   />
