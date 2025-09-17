@@ -277,7 +277,7 @@ const Work = () => {
                       ${
                         idx === activeIndex
                           ? "h-1 w-10 bg-accent"
-                          : "h-[2px] w-50 bg-white/20"
+                          : "h-[2px] w-5 bg-white/20"
                       }
                     `}
                   />
