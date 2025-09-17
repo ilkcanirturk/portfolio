@@ -23,38 +23,39 @@ import SliderButtons from "@/components/SliderButtons";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
+    category: "web",
+    title: "YosAcademy",
     description:
-      "StorishCopilot: A platform designed to manage all logistics operations for the Storish brand.",
+      "YosAcademy: A consulting platform for international students.",
     stack: [
-      { name: "React.js" },
-      { name: "Redux Saga" },
-      { name: "Css 3" },
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "i18n" },  
     ],
-    image: "/assets/work/storish.png",
-    live: "https://www.ilkcan.me/work",
+    image: "/assets/work/yosacademy.png",
+    live: "https://www.yosacademy.info",
     github: "https://github.com/ilkcanirturk",
   },
   {
     num: "02",
-    category: "frontend",
-    title: "project 2",
+    category: "web",
+    title: "Storish Product Catalog",
     description:
-      "After-Sales Service module for E-Seller Assist Platform of Gümüşsuyu brand.",
+      "Storish Product Catalog: A modern, multilingual product catalog for the Storish brand.",
     stack: [
-      { name: "React.js" },
-      { name: "Bootstrap" },
+      { name: "Next.js" },
       { name: "Tailwind" },
+      { name: "Vercel" },
+      
     ],
-    image: "/assets/work/esa-gumussuyu-ss.png",
-    live: "https://www.ilkcan.me/work",
+    image: "/assets/work/storishcatalog.png",
+    live: "https://www.catalogstorish.com",
     github: "https://github.com/ilkcanirturk",
   },
   {
     num: "03",
     category: "frontend",
-    title: "project 3",
+    title: "Bellona EXPO",
     description:
       "Bellona International Trade Platform: A platform for managing international operations of the Bellona brand.",
     stack: [
@@ -69,7 +70,7 @@ const projects = [
   {
     num: "04",
     category: "frontend",
-    title: "project 4",
+    title: "İstikbal EXPO",
     description:
       "İstikbal Global Trade Platform: Designed to oversee and manage international operations for the İstikbal brand.",
       stack: [
@@ -84,7 +85,7 @@ const projects = [
   {
     num: "05",
     category: "frontend",
-    title: "project 5",
+    title: "Mondihome EXPO",
     description:
       "Mondihome Global Operations Platform: A platform for efficiently managing international operations for the Mondihome brand.",
       stack: [
@@ -99,7 +100,7 @@ const projects = [
   {
     num: "06",
     category: "mobile",
-    title: "project 6",
+    title: "Link App",
     description:
       "Link App: An experimental chat application built with React Native.",
     stack: [
@@ -115,7 +116,7 @@ const projects = [
   {
     num: "07",
     category: "web",
-    title: "project 7",
+    title: "Storish Portal",
     description:
       "Storish Portal: A business intelligence platform that centralizes the company's e-commerce operations and enables data-driven decision-making.",
     stack: [
@@ -130,34 +131,32 @@ const projects = [
   },
   {
     num: "08",
-    category: "web",
-    title: "project 8",
+    category: "frontend",
+    title: "Storish CoPilot",
     description:
-      "YosAcademy: A consulting platform for international students.",
+      "StorishCopilot: A platform designed to manage all logistics operations for the Storish brand.",
     stack: [
-      { name: "Next.js" },
-      { name: "TypeScript" },
-      { name: "i18n" },
-      
+      { name: "React.js" },
+      { name: "Redux Saga" },
+      { name: "Css 3" },
     ],
-    image: "/assets/work/yosacademy.png",
-    live: "https://www.yosacademy.info",
+    image: "/assets/work/storish.png",
+    live: "https://www.ilkcan.me/work",
     github: "https://github.com/ilkcanirturk",
   },
   {
     num: "09",
-    category: "web",
-    title: "project 9",
+    category: "frontend",
+    title: "Gümüşsuyu ESA",
     description:
-      "Storish Product Catalog: A modern, multilingual product catalog for the Storish brand.",
+      "After-Sales Service module for E-Seller Assist Platform of Gümüşsuyu brand.",
     stack: [
-      { name: "Next.js" },
+      { name: "React.js" },
+      { name: "Bootstrap" },
       { name: "Tailwind" },
-      { name: "Vercel" },
-      
     ],
-    image: "/assets/work/storishcatalog.png",
-    live: "https://www.catalogstorish.com",
+    image: "/assets/work/esa-gumussuyu-ss.png",
+    live: "https://www.ilkcan.me/work",
     github: "https://github.com/ilkcanirturk",
   },
 ];
@@ -191,7 +190,7 @@ const Work = () => {
               </div>
             </div>
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-              {project.category}
+            {project.title} - {project.category}
             </h2>
             <p className="text-white/60">{project.description}</p>
             <ul className="flex gap-4">
