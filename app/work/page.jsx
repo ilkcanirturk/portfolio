@@ -49,7 +49,7 @@ const projects = [
       
     ],
     image: "/assets/work/storishcatalog.png",
-    live: "https://www.ilkcan.me/work",
+    live: "https://www.storishcatalog.com",
     github: "https://github.com/ilkcanirturk",
   },
   {
